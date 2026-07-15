@@ -1,0 +1,29 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="88" y1="52" x2="1092" y2="667" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071116"/>
+      <stop offset="1" stop-color="#111227"/>
+    </linearGradient>
+    <linearGradient id="grid" x1="266" y1="140" x2="936" y2="585" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ABFF63"/>
+      <stop offset="0.46" stop-color="#5AEFEE"/>
+      <stop offset="1" stop-color="#8967FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="48" fill="url(#bg)"/>
+  <rect x="50" y="50" width="1100" height="620" rx="36" stroke="rgba(255,255,255,0.08)"/>
+  <rect x="735" y="126" width="220" height="220" rx="34" stroke="url(#grid)" stroke-width="2"/>
+  <rect x="772" y="163" width="146" height="146" rx="24" stroke="url(#grid)" stroke-width="10" stroke-opacity="0.7"/>
+  <circle cx="845" cy="236" r="18" fill="#ABFF63"/>
+  <path d="M210 474H648" stroke="url(#grid)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M210 534H596" stroke="url(#grid)" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <path d="M210 594H704" stroke="url(#grid)" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.4"/>
+  <path d="M362 198L632 198" stroke="url(#grid)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M362 252L580 252" stroke="url(#grid)" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.55"/>
+  <path d="M230 150H302V222H230V150Z" stroke="url(#grid)" stroke-width="2"/>
+  <path d="M286 478V610" stroke="url(#grid)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M438 478V610" stroke="url(#grid)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M590 478V610" stroke="url(#grid)" stroke-width="2" stroke-linecap="round"/>
+  <rect x="108" y="108" width="336" height="20" rx="10" fill="rgba(255,255,255,0.14)"/>
+  <rect x="108" y="146" width="212" height="12" rx="6" fill="rgba(255,255,255,0.08)"/>
+</svg>

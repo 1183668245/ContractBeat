@@ -1,0 +1,29 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050608"/>
+      <stop offset="1" stop-color="#15100A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(830 180) rotate(130) scale(420 320)">
+      <stop stop-color="#F6D27A" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#F6D27A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="240" y1="140" x2="880" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1B0"/>
+      <stop offset="0.45" stop-color="#D4A94B"/>
+      <stop offset="1" stop-color="#6F4817"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="48" fill="url(#bg)"/>
+  <rect width="1200" height="720" rx="48" fill="url(#glow)"/>
+  <rect x="54" y="54" width="1092" height="612" rx="34" stroke="rgba(255,255,255,0.08)"/>
+  <circle cx="820" cy="220" r="138" fill="url(#gold)" fill-opacity="0.18"/>
+  <circle cx="820" cy="220" r="98" stroke="url(#gold)" stroke-width="2" stroke-opacity="0.65"/>
+  <circle cx="820" cy="220" r="54" stroke="url(#gold)" stroke-width="10" stroke-opacity="0.75"/>
+  <path d="M193 540C390 392 548 344 733 314" stroke="url(#gold)" stroke-width="2.5" stroke-linecap="round" stroke-opacity="0.65"/>
+  <path d="M290 590C508 454 674 407 925 385" stroke="url(#gold)" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.36"/>
+  <rect x="118" y="118" width="312" height="18" rx="9" fill="#F1D58A" fill-opacity="0.18"/>
+  <rect x="118" y="154" width="188" height="12" rx="6" fill="#F1D58A" fill-opacity="0.1"/>
+  <rect x="118" y="560" width="292" height="26" rx="13" fill="#F1D58A" fill-opacity="0.08"/>
+  <rect x="118" y="603" width="214" height="12" rx="6" fill="#F1D58A" fill-opacity="0.08"/>
+</svg>

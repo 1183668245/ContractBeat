@@ -1,0 +1,28 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="600" y1="52" x2="600" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08110D"/>
+      <stop offset="0.58" stop-color="#0E1118"/>
+      <stop offset="1" stop-color="#120B1B"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(792 206) rotate(130) scale(340 220)">
+      <stop stop-color="#C4FF86" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#C4FF86" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mount" x1="393" y1="326" x2="880" y2="575" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A9FF5F"/>
+      <stop offset="0.48" stop-color="#67E8D5"/>
+      <stop offset="1" stop-color="#725AFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="48" fill="url(#bg)"/>
+  <rect width="1200" height="720" rx="48" fill="url(#sun)"/>
+  <rect x="50" y="50" width="1100" height="620" rx="36" stroke="rgba(255,255,255,0.08)"/>
+  <path d="M120 595L389 408L511 490L648 314L789 472L937 252L1080 595H120Z" fill="url(#mount)" fill-opacity="0.55"/>
+  <path d="M120 635L322 502L485 575L682 388L823 530L1028 446L1080 635H120Z" fill="rgba(255,255,255,0.05)"/>
+  <circle cx="832" cy="206" r="88" fill="rgba(195,255,132,0.16)"/>
+  <circle cx="832" cy="206" r="46" fill="rgba(195,255,132,0.56)"/>
+  <rect x="110" y="112" width="362" height="20" rx="10" fill="rgba(255,255,255,0.14)"/>
+  <rect x="110" y="148" width="230" height="12" rx="6" fill="rgba(255,255,255,0.08)"/>
+  <rect x="110" y="590" width="262" height="18" rx="9" fill="rgba(255,255,255,0.06)"/>
+</svg>
