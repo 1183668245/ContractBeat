@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContractBeat｜输入合约，生成项目旋律</title>
+  <meta
+    name="description"
+    content="ContractBeat 是一款面向 Web3 项目的 AI 音乐与视觉创作网站。输入代币地址，解析项目叙事，生成主题歌词、音乐方案与专属海报。"
+  />
+  <link rel="icon" type="image/webp" href="./assets/covers/logo.webp" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="home">
+  <div class="site-noise"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="ambient ambient-c"></div>
+
+  <header class="site-header" id="top">
+    <div class="shell nav-shell panel">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark"><img src="./assets/covers/logo.webp" alt="ContractBeat logo" /></span>
+        <span class="brand-text">CONTRACTBEAT</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="./index.html">首页</a>
+        <a href="./plaza.html">旋律广场</a>
+        <a href="./index.html#workflow">使用说明</a>
+        <a href="./plaza.html?mode=mine">我的作品</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="langToggle" class="icon-button" type="button">EN</button>
+        <button class="button ghost" id="connectWalletEntryBtn" data-connect-wallet data-connected-href="./plaza.html?mode=mine" type="button">连接钱包</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-home shell reveal" id="product">
+      <div class="hero-core">
+        <span class="eyebrow" id="heroEyebrow">WEB3 AI 音乐与视觉创作平台</span>
+        <h1 id="heroTitle">输入合约，输出音乐</h1>
+        <p class="hero-copy" id="heroDesc">
+          粘贴合约，3 分钟生成完整项目主题曲。
+        </p>
+
+        <div class="chain-tabs" role="tablist" aria-label="选择链网络">
+          <button class="chain-tab active" type="button" data-chain="bsc"><span class="chain-logo"><img src="./assets/covers/1.webp" alt="BNB Chain logo" /></span><span>BNB</span></button>
+          <button class="chain-tab" type="button" data-chain="solana"><span class="chain-logo"><img src="./assets/covers/2.webp" alt="Solana logo" /></span><span>Solana</span></button>
+          <button class="chain-tab" type="button" data-chain="robinhood"><span class="chain-logo"><img src="./assets/covers/3.webp" alt="Robinhood logo" /></span><span>Robinhood</span></button>
+        </div>
+
+        <form class="hero-search panel" id="heroSearchForm">
+          <div class="hero-search-head">
+            <span class="field-label" id="selectedChainLabel">BSC</span>
+            <span class="field-hint" id="inputHint">请输入代币合约地址</span>
+          </div>
+          <div class="hero-search-row">
+            <input
+              id="contractField"
+              class="hero-input"
+              type="text"
+              placeholder="请输入代币合约地址"
+              aria-label="代币地址"
+            />
+            <button class="button primary" id="parseProjectBtn" type="submit">解析项目</button>
+          </div>
+          <p class="support-line" id="supportLine">支持 BNB Smart Chain、Solana、Robinhood Chain</p>
+        </form>
+
+        <div class="example-strip">
+          <p class="example-title">不知道输入什么？试试这些示例项目</p>
+          <div class="example-grid">
+            <button class="example-card panel" type="button" data-sample="bsc">
+              <span class="example-logo"><img src="./assets/covers/1.webp" alt="BNB Chain logo" /></span>
+              <span class="example-meta">
+                <strong>BSC 示例</strong>
+                <span>0xc748...e8de</span>
+              </span>
+            </button>
+            <button class="example-card panel" type="button" data-sample="solana">
+              <span class="example-logo"><img src="./assets/covers/2.webp" alt="Solana logo" /></span>
+              <span class="example-meta">
+                <strong>Solana 示例</strong>
+                <span>DezXAZ8...PB263</span>
+              </span>
+            </button>
+            <button class="example-card panel" type="button" data-sample="robinhood">
+              <span class="example-logo"><img src="./assets/covers/3.webp" alt="Robinhood logo" /></span>
+              <span class="example-meta">
+                <strong>Robinhood 示例</strong>
+                <span>0x020b...18b4</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-aside panel reveal-delay">
+        <div class="console-ring"></div>
+        <div class="aside-head">
+          <span class="eyebrow subdued">项目解析预览</span>
+          <span class="meta-pill">DEX Screener × 叙事理解</span>
+        </div>
+        <div class="mini-project">
+          <div class="mini-logo">R</div>
+          <div>
+            <strong data-project-name>Robin</strong>
+            <p data-project-tagline>自由、速度、社区共识的链上知更鸟。</p>
+          </div>
+        </div>
+        <div class="metric-grid">
+          <article class="metric-card">
+            <span>价格</span>
+            <strong data-project-price>$0.0042</strong>
+          </article>
+          <article class="metric-card">
+            <span>市值</span>
+            <strong data-project-marketcap>$4.8M</strong>
+          </article>
+          <article class="metric-card">
+            <span>流动性</span>
+            <strong data-project-liquidity>$1.1M</strong>
+          </article>
+          <article class="metric-card">
+            <span>24H 成交量</span>
+            <strong data-project-volume>$780K</strong>
+          </article>
+        </div>
+        <div class="story-block">
+          <h3>AI 项目理解</h3>
+          <ul class="story-list">
+            <li><span>项目定位</span><strong data-project-type>Meme × 社区文化</strong></li>
+            <li><span>核心意象</span><strong data-project-imagery>知更鸟 / 声波 / 霓虹 / 飞行</strong></li>
+            <li><span>推荐音乐</span><strong data-project-music>暗黑电子 · 社区合唱 · 128 BPM</strong></li>
+          </ul>
+        </div>
+        <div class="signal-band">
+          <span>自由</span>
+          <span>飞行</span>
+          <span>社区</span>
+          <span>霓虹</span>
+          <span>旋律</span>
+          <span>Robin</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section shell reveal" id="workflow">
+      <div class="section-heading">
+        <span class="eyebrow">从输入地址到完整作品</span>
+        <h2>从地址开始，把项目做成作品</h2>
+        <p>
+          从项目解析、叙事理解到旋律与视觉生成，整条创作链路在这里完成。
+        </p>
+      </div>
+
+      <div class="workflow-grid">
+        <article class="workflow-card panel">
+          <span class="step-no">01</span>
+          <h3>解析项目</h3>
+          <p>通过链选择器、地址搜索、核心数据卡与项目资料，迅速建立项目档案。</p>
+        </article>
+        <article class="workflow-card panel">
+          <span class="step-no">02</span>
+          <h3>理解叙事</h3>
+          <p>将品牌故事、社区情绪、核心意象和可信来源整合为 AI 项目理解。</p>
+        </article>
+        <article class="workflow-card panel">
+          <span class="step-no">03</span>
+          <h3>配置创作</h3>
+          <p>选择语言、曲风、歌词重点与海报风格，让结果更像项目自己的作品。</p>
+        </article>
+        <article class="workflow-card panel">
+          <span class="step-no">04</span>
+          <h3>生成与扩展</h3>
+          <p>从歌词、音乐方案到封面与海报，结果页继续修改，作品还能进入旋律广场。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell reveal">
+      <div class="section-heading split">
+        <div>
+          <span class="eyebrow">页面布局方向</span>
+          <h2>左侧项目档案，右侧 AI 灵魂档案</h2>
+        </div>
+        <a class="button ghost" href="./project.html">查看项目解析页</a>
+      </div>
+
+      <div class="preview-analysis panel">
+        <div class="preview-column archive">
+          <div class="preview-heading">
+            <h3>项目基础资料</h3>
+            <span class="meta-pill">DEX Screener 参考</span>
+          </div>
+          <div class="profile-summary">
+            <div class="profile-logo">R</div>
+            <div>
+              <strong data-project-name>Robin</strong>
+              <p>ROBIN · BNB Chain</p>
+            </div>
+          </div>
+          <div class="copy-line">
+            <span data-project-address>0xc748673057861a797275cd8a068abb95a902e8de</span>
+            <button class="icon-button js-copy" type="button" data-copy-address="true" data-copy="0xc748673057861a797275cd8a068abb95a902e8de">复制</button>
+          </div>
+          <div class="metric-grid compact">
+            <article class="metric-card"><span>价格</span><strong data-project-price>--</strong></article>
+            <article class="metric-card"><span>市值</span><strong data-project-marketcap>--</strong></article>
+            <article class="metric-card"><span>流动性</span><strong data-project-liquidity>--</strong></article>
+            <article class="metric-card"><span>24H 交易量</span><strong data-project-volume>--</strong></article>
+          </div>
+          <div class="link-row">
+            <a class="chip-link" href="./project.html">官网</a>
+            <a class="chip-link" href="./project.html">X</a>
+            <a class="chip-link" href="./project.html">Telegram</a>
+            <a class="chip-link" href="./project.html">Explorer</a>
+          </div>
+        </div>
+
+        <div class="preview-column soul">
+          <div class="preview-heading">
+            <h3>AI 项目理解</h3>
+            <span class="meta-pill accent">可信度 82%</span>
+          </div>
+          <div class="narrative-stack">
+            <article>
+              <span>项目类型</span>
+              <strong>Meme × 社区文化</strong>
+            </article>
+            <article>
+              <span>一句话定位</span>
+              <strong>一只代表自由、速度与社区共识的链上知更鸟。</strong>
+            </article>
+            <article>
+              <span>核心意象</span>
+              <strong>知更鸟 / 霓虹城市 / 声波 / 飞行 / 绿色光芒</strong>
+            </article>
+            <article>
+              <span>推荐音乐</span>
+              <strong>电子摇滚 · 社区合唱 · 128 BPM</strong>
+            </article>
+          </div>
+          <div class="signal-band">
+            <span>自由</span>
+            <span>热血</span>
+            <span>团结</span>
+            <span>反叛</span>
+          </div>
+          <div class="action-row">
+            <a class="button primary disabled" href="javascript:void(0)" aria-disabled="true" tabindex="-1">使用这个故事开始创作</a>
+            <a class="button ghost disabled" href="javascript:void(0)" aria-disabled="true" tabindex="-1">修改项目资料</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell reveal">
+      <div class="section-heading split">
+        <div>
+          <span class="eyebrow">创作工作台</span>
+          <h2>一套可配置的旋律工作台</h2>
+        </div>
+        <a class="button ghost disabled" href="javascript:void(0)" aria-disabled="true" tabindex="-1">打开创作设置页</a>
+      </div>
+
+      <div class="studio-preview">
+        <div class="studio-card panel cover-preview">
+          <div class="cover-frame">
+            <div class="cover-disc"></div>
+            <div class="cover-poster"></div>
+          </div>
+          <div class="cover-copy">
+            <strong>Robin Project Theme Pack</strong>
+            <p>Logo、叙事摘要、关键词与当前海报风格会始终作为创作上下文存在。</p>
+          </div>
+        </div>
+
+        <div class="studio-card panel settings-preview">
+          <div class="setting-group">
+            <span class="group-title">语言</span>
+            <div class="segmented-row">
+              <button class="seg-chip active" type="button">中文</button>
+              <button class="seg-chip" type="button">English</button>
+              <button class="seg-chip" type="button">中英双语</button>
+            </div>
+          </div>
+          <div class="setting-group">
+            <span class="group-title">音乐风格</span>
+            <div class="mini-card-grid">
+              <button class="mini-option active" type="button">🔥 热血社区战歌</button>
+              <button class="mini-option" type="button">🌃 暗黑电子</button>
+              <button class="mini-option" type="button">⚡ 赛博朋克</button>
+              <button class="mini-option" type="button">🎻 史诗管弦</button>
+            </div>
+          </div>
+          <div class="setting-group">
+            <span class="group-title">海报风格</span>
+            <div class="poster-choice-row">
+              <div class="poster-thumb active" style="background-image:url('https://picsum.photos/seed/robin-neon-poster/300/420');"></div>
+              <div class="poster-thumb" style="background-image:url('https://picsum.photos/seed/robin-cinematic-poster/300/420');"></div>
+              <div class="poster-thumb" style="background-image:url('https://picsum.photos/seed/robin-future-poster/300/420');"></div>
+            </div>
+          </div>
+          <a class="button primary full-width disabled" href="javascript:void(0)" aria-disabled="true" tabindex="-1">✦ 生成我的项目旋律</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell reveal">
+      <div class="section-heading split">
+        <div>
+          <span class="eyebrow">生成结果与作品广场</span>
+          <h2>生成之后，作品继续流动</h2>
+        </div>
+        <a class="button ghost" href="./plaza.html">进入旋律广场</a>
+      </div>
+
+      <div class="result-preview-grid">
+        <article class="result-preview panel">
+          <div class="preview-cover large network-art" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80');"></div>
+          <div class="preview-copy">
+            <h3>《Fly Beyond the Chain》</h3>
+            <p>专辑信息、歌词目录、音乐方案与海报切换并列排布，方便浏览和复制。</p>
+            <a class="text-link disabled" href="javascript:void(0)" aria-disabled="true" tabindex="-1">查看结果页</a>
+          </div>
+        </article>
+
+        <article class="result-preview panel">
+          <div class="plaza-stack">
+            <div class="plaza-card-card first network-art" style="background-image:url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="plaza-card-card second network-art" style="background-image:url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="plaza-card-card third network-art" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="plaza-card-card fourth network-art" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=80');"></div>
+          </div>
+          <div class="preview-copy">
+            <h3>作品流</h3>
+            <p>生成后的作品会继续被浏览、进入详情与分享。</p>
+            <a class="text-link" href="./plaza.html">查看旋律广场</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell reveal">
+      <div class="cta-panel panel">
+        <div>
+          <span class="eyebrow">ContractBeat Flow</span>
+          <h2>从一个合约，开始一首作品</h2>
+          <p>从项目解析到结果发布，整条创作路径已经打通。</p>
+        </div>
+        <div class="action-row">
+          <a class="button primary" href="./project.html">从项目解析开始</a>
+          <a class="button ghost" href="./plaza.html">先看作品广场</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-copy">
+        <strong>ContractBeat © 2026</strong>
+        <span>免责声明：本站内容仅用于创作展示与项目叙事辅助，不构成投资建议、收益承诺或金融意见。</span>
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2H21.5l-7.11 8.127L22.75 22h-6.542l-5.123-6.696L5.222 22H1.964l7.606-8.694L1.5 2h6.708l4.63 6.115L18.244 2Zm-1.142 18h1.803L7.229 3.895H5.293L17.102 20Z"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 4.2 18.3 19.5c-.25 1.08-.9 1.35-1.82.84l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.02.5l.36-5.12 9.32-8.42c.4-.36-.09-.56-.63-.2L5.52 13.06.56 11.51c-1.08-.34-1.1-1.08.22-1.6L20.2 2.4c.9-.33 1.68.2 1.4 1.8Z"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.18a10.94 10.94 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

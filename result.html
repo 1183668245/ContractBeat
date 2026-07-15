@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContractBeat｜结果页</title>
+  <meta name="description" content="ContractBeat 结果页：数字专辑页面、歌词、音乐方案与海报切换。" />
+  <link rel="icon" type="image/webp" href="./assets/covers/logo.webp" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="result">
+  <div class="site-noise"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+
+  <header class="site-header">
+    <div class="shell nav-shell panel">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark"><img src="./assets/covers/logo.webp" alt="ContractBeat logo" /></span>
+        <span class="brand-text">CONTRACTBEAT</span>
+      </a>
+      <nav class="main-nav">
+        <a href="./index.html">首页</a>
+        <a href="./plaza.html">旋律广场</a>
+        <a href="./index.html#workflow">使用说明</a>
+        <a href="./plaza.html?mode=mine">我的作品</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="langToggle" class="icon-button" type="button">EN</button>
+        <span class="meta-pill accent" id="resultPagePill">结果页</span>
+        <a class="button ghost" href="./plaza.html?mode=mine" id="backToWorksBtn">我的作品</a>
+        <a class="button ghost" href="./studio.html" id="resultEditBtn">继续修改</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell page-main">
+    <section class="album-hero panel reveal">
+      <div class="album-art-stage">
+        <div class="album-art" id="resultAlbumArt"></div>
+      </div>
+      <div class="album-info">
+        <h1 class="page-title" data-result-title>《Fly Beyond the Chain》</h1>
+        <p class="page-subtitle" data-result-subtitle><span data-project-name>Robin</span> 项目主题曲</p>
+        <div class="tag-row" data-result-tags>
+          <span class="meta-pill">暗黑电子</span>
+          <span class="meta-pill">社区合唱</span>
+          <span class="meta-pill">128 BPM</span>
+        </div>
+        <div class="result-meta-grid" id="resultMetaGrid">
+          <article class="result-meta-card">
+            <span>作品编号</span>
+            <strong id="resultMetaId"># --</strong>
+          </article>
+          <article class="result-meta-card">
+            <span>所属链</span>
+            <strong id="resultMetaChain">待识别</strong>
+          </article>
+          <article class="result-meta-card wide">
+            <div class="result-meta-split">
+              <div>
+                <span>钱包归属</span>
+                <strong id="resultMetaWallet">未连接</strong>
+              </div>
+              <div>
+                <span>合约地址</span>
+                <strong class="result-meta-address" id="resultMetaAddress">待补充</strong>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <div class="action-row">
+          <button class="button ghost js-copy" type="button" id="copyLyricsBtn" data-copy="Fly Beyond the Chain 完整歌词">复制歌词</button>
+          <button class="button ghost js-copy" type="button" id="copyPromptBtn" data-copy="暗黑电子摇滚，128 BPM，男声主唱+社区合唱">复制音乐提示词</button>
+          <button class="button primary js-copy" type="button" id="shareResultBtn" data-copy="https://robinmelody.app/result/fly-beyond-the-chain">分享作品</button>
+        </div>
+        <div class="prompt-box top-gap audio-player-shell">
+          <div class="audio-player-head">
+            <p>歌曲音频</p>
+            <span class="meta-pill">Album Playback</span>
+          </div>
+          <strong id="musicStatusText">当前还没有可播放音频</strong>
+          <div class="audio-player-stage">
+            <div class="audio-player-glow"></div>
+            <audio id="resultAudio" controls preload="metadata" style="display:none; width:100%;"></audio>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lyrics-layout reveal">
+      <aside class="lyrics-nav panel">
+        <span class="meta-pill">目录</span>
+        <a href="#intro">Intro</a>
+        <a href="#verse">Verse</a>
+        <a href="#chorus">Chorus</a>
+        <a href="#bridge">Bridge</a>
+        <a href="#outro">Outro</a>
+      </aside>
+
+      <div class="lyrics-content panel" data-result-lyrics>
+        <article class="lyric-block" id="intro">
+          <span>INTRO</span>
+          <p>霓虹从链上升起，城市开始响应，知更鸟拍打出第一道节奏。</p>
+        </article>
+        <article class="lyric-block" id="verse">
+          <span>VERSE 1</span>
+          <p>We rise from the chain, from the pulse of the crowd<br />A signal in motion, alive and loud</p>
+        </article>
+        <article class="lyric-block chorus" id="chorus">
+          <span>CHORUS</span>
+          <p>Fly beyond the chain, let the green light lead the way<br />Every token finds a voice, every story finds a stage</p>
+        </article>
+        <article class="lyric-block" id="bridge">
+          <span>BRIDGE</span>
+          <p>在社区的合唱里，项目不再只是一个地址，而是一段能被记住的旋律。</p>
+        </article>
+        <article class="lyric-block" id="outro">
+          <span>OUTRO</span>
+          <p>Robin keeps flying, the city keeps glowing, the melody keeps moving.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="result-grid reveal">
+      <div class="music-plan panel">
+        <div class="mini-heading">
+          <h2>音乐方案</h2>
+          <span class="meta-pill">专业但好懂</span>
+        </div>
+        <div class="plan-table" data-result-plan>
+          <div><span>风格</span><strong>暗黑电子摇滚</strong></div>
+          <div><span>速度</span><strong>128 BPM</strong></div>
+          <div><span>人声</span><strong>男声主唱 + 社区合唱</strong></div>
+          <div><span>乐器</span><strong>合成器、重低音、电影鼓点</strong></div>
+          <div><span>情绪</span><strong>热血、自由、未来感</strong></div>
+        </div>
+        <div class="prompt-box">
+          <p>可复制音乐生成提示词</p>
+          <code data-result-prompt>dark electronic rock, cinematic drum hits, male lead vocal, community choir, neon city atmosphere, freedom and flight narrative, 128 bpm</code>
+        </div>
+      </div>
+
+      <div class="poster-panel panel">
+        <div class="mini-heading">
+          <h2>海报与封面</h2>
+          <div class="segmented-row compact" data-select-group="result-media">
+            <button class="seg-chip active" type="button" data-target="cover">音乐封面</button>
+            <button class="seg-chip" type="button" data-target="poster">X 横版海报</button>
+          </div>
+        </div>
+        <div class="media-stage is-cover" id="resultMediaStage">
+          <div class="media-frame active" data-media-frame="cover" id="resultCoverFrame"></div>
+          <div class="media-frame poster-mode" data-media-frame="poster" id="resultPosterFrame"></div>
+        </div>
+        <div class="action-row wrap">
+          <button class="button ghost" type="button">保存图片</button>
+          <button class="button ghost" type="button">切换模板</button>
+          <button class="button ghost" type="button">重新生成主视觉</button>
+          <button class="button primary js-copy" type="button" id="copyPromoBtn" data-copy="Robin 项目主题曲已生成，欢迎社区共鸣转发。">复制宣传文案</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-copy">
+        <strong>ContractBeat © 2026</strong>
+        <span>免责声明：本站内容仅用于创作展示与项目叙事辅助，不构成投资建议、收益承诺或金融意见。</span>
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2H21.5l-7.11 8.127L22.75 22h-6.542l-5.123-6.696L5.222 22H1.964l7.606-8.694L1.5 2h6.708l4.63 6.115L18.244 2Zm-1.142 18h1.803L7.229 3.895H5.293L17.102 20Z"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 4.2 18.3 19.5c-.25 1.08-.9 1.35-1.82.84l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.02.5l.36-5.12 9.32-8.42c.4-.36-.09-.56-.63-.2L5.52 13.06.56 11.51c-1.08-.34-1.1-1.08.22-1.6L20.2 2.4c.9-.33 1.68.2 1.4 1.8Z"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.18a10.94 10.94 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

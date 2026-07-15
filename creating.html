@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ContractBeat｜生成过程页</title>
+  <meta name="description" content="ContractBeat 生成过程页：让用户看到 AI 正在理解项目并生成旋律。" />
+  <link rel="icon" type="image/webp" href="./assets/covers/logo.webp" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body data-page="creating">
+  <div class="site-noise"></div>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-c"></div>
+
+  <header class="site-header">
+    <div class="shell nav-shell panel">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark"><img src="./assets/covers/logo.webp" alt="ContractBeat logo" /></span>
+        <span class="brand-text">CONTRACTBEAT</span>
+      </a>
+      <nav class="main-nav">
+        <a href="./index.html">首页</a>
+        <a href="./plaza.html">旋律广场</a>
+        <a href="./index.html#workflow">使用说明</a>
+        <a href="./plaza.html?mode=mine">我的作品</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="langToggle" class="icon-button" type="button">EN</button>
+        <span class="meta-pill accent" id="creatingPagePill">生成中</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell page-main">
+    <section class="creating-layout reveal">
+      <div class="creating-panel panel">
+        <span class="eyebrow" id="creatingEyebrow">生成过程页</span>
+        <h1 class="page-title" id="creatingTitle">正在为 <span data-project-name>Robin</span> 创作专属旋律</h1>
+        <p class="page-subtitle" id="creatingSubtitle">
+          这里不只是一个转圈。我们会把“项目被理解”的过程显示出来，让用户感知 AI 正在把链上叙事转化为歌词、视觉和氛围。
+        </p>
+
+        <div class="progress-list" id="progressList">
+          <div class="progress-item done">
+            <span class="progress-mark">✓</span>
+            <span>已识别项目资料</span>
+          </div>
+          <div class="progress-item done">
+            <span class="progress-mark">✓</span>
+            <span>已整理官方信息</span>
+          </div>
+          <div class="progress-item done">
+            <span class="progress-mark">✓</span>
+            <span>已提炼项目故事</span>
+          </div>
+          <div class="progress-item active" data-progress-step>
+            <span class="progress-mark">●</span>
+            <span>正在创作主题歌词</span>
+          </div>
+          <div class="progress-item" data-progress-step>
+            <span class="progress-mark">○</span>
+            <span>正在设计音乐主视觉</span>
+          </div>
+          <div class="progress-item" data-progress-step>
+            <span class="progress-mark">○</span>
+            <span>正在制作宣传海报</span>
+          </div>
+        </div>
+
+        <div class="dynamic-sentence panel inset-panel" id="dynamicSentence">
+          AI 正在把项目叙事编织成可被听见的旋律结构。
+        </div>
+
+        <div class="generation-ritual panel inset-panel" id="generationRitual">
+          <div class="ritual-core"></div>
+          <div class="ritual-bars" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="ritual-copy">
+            <span class="meta-pill" id="generationStatePill">生成中</span>
+            <strong id="generationHint">正在为作品凝聚音色、节奏与情绪氛围</strong>
+          </div>
+        </div>
+
+        <div class="action-row top-gap">
+          <a class="button primary disabled" id="toResultBtn" href="./result.html" aria-disabled="true">生成完成后查看结果</a>
+        </div>
+      </div>
+
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-copy">
+        <strong>ContractBeat © 2026</strong>
+        <span>免责声明：本站内容仅用于创作展示与项目叙事辅助，不构成投资建议、收益承诺或金融意见。</span>
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2H21.5l-7.11 8.127L22.75 22h-6.542l-5.123-6.696L5.222 22H1.964l7.606-8.694L1.5 2h6.708l4.63 6.115L18.244 2Zm-1.142 18h1.803L7.229 3.895H5.293L17.102 20Z"/></svg></a>
+        <a href="#" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 4.2 18.3 19.5c-.25 1.08-.9 1.35-1.82.84l-5.03-3.7-2.43 2.34c-.27.27-.5.5-1.02.5l.36-5.12 9.32-8.42c.4-.36-.09-.56-.63-.2L5.52 13.06.56 11.51c-1.08-.34-1.1-1.08.22-1.6L20.2 2.4c.9-.33 1.68.2 1.4 1.8Z"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.97.1-.75.4-1.26.73-1.56-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.14 1.18a10.94 10.94 0 0 1 5.72 0c2.18-1.49 3.14-1.18 3.14-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.83 1.18 3.09 0 4.43-2.69 5.4-5.26 5.69.41.35.78 1.05.78 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
